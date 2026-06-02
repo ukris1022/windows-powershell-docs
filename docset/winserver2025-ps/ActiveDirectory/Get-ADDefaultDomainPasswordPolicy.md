@@ -38,35 +38,35 @@ You can also set the parameter to a domain object variable, such as `$<localDoma
 
 ### Example 1: Get the default domain password policy from the logged on user domain
 ```
-PS C:\> Get-ADDefaultDomainPasswordPolicy -Current LoggedOnUser
+Get-ADDefaultDomainPasswordPolicy -Current LoggedOnUser
 ```
 
 This command gets the default domain password policy from current logged on user domain.
 
 ### Example 2: Get the default domain password policy from the current local computer
 ```
-PS C:\> Get-ADDefaultDomainPasswordPolicy -Current LocalComputer
+Get-ADDefaultDomainPasswordPolicy -Current LocalComputer
 ```
 
 This command gets the default domain password policy from current local computer.
 
 ### Example 3: Get the default domain password policy from a specified domain
 ```
-PS C:\> Get-ADDefaultDomainPasswordPolicy -Identity fabrikam.com
+Get-ADDefaultDomainPasswordPolicy -Identity fabrikam.com
 ```
 
 This command gets the default domain password policy from the domain specified by the **Site** parameter.
 
 ### Example 4: Get the default domain password policy objects from all the domains in the forest
 ```
-PS C:\> (Get-ADForest -Current LoggedOnUser).Domains | %{ Get-ADDefaultDomainPasswordPolicy -Identity $_ }
+(Get-ADForest -Current LoggedOnUser).Domains | %{ Get-ADDefaultDomainPasswordPolicy -Identity $_ }
 ```
 
 This command gets the default domain password policy objects from all the domains in the forest.
 
 ### Example 5: Get the default domain password policy from the logged on user domain.
 ```
-PS C:\> Get-ADDefaultDomainPasswordPolicy
+Get-ADDefaultDomainPasswordPolicy
 ```
 
 This command gets the default domain password policy from current logged on user domain.
